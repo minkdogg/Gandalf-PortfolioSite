@@ -1,0 +1,284 @@
+/*additional styling for more specific rules outside of bootstrap.min.css*/
+
+/*load font Legothick.ttf from fonts folder. Font downloaded from */
+@font-face {
+    font-family: "Legothick";
+    src: url("../fonts/Legothick.ttf");
+}
+
+/*base styles for page. Lato font taken from google fonts.
+min-width 300px for page, div box calculated using border-box sizing.*/
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	color: #747704;
+	min-width: 300px;
+}
+
+hr {
+	height: 5px;
+	background-color: #bcbbbb;
+	border: none;
+}
+
+/*header styles*/
+.header-holder {
+	display: inline;
+}
+
+.description {
+	float: right;
+	text-transform: uppercase;
+}
+
+.name {
+	font-size: 4em;
+	font-weight: 100;
+}
+
+.job {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.logo {
+	margin-top: 20px;
+	max-width: 100%;
+	min-width: 100px;
+	color: #f8981c;
+	border-style: solid;
+    border-color: #f8981c;
+	border-width: 2px;
+}
+
+/* will work for all browsers except browsers earlier than IE 10 
+hover and keyframe make logo spin 360 degrees*/
+.logo:hover {
+	-webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+	
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/*end of header class styles*/
+
+/*main section styles*/
+.main-image{
+	width: 100%;
+	min-height: 400px;
+	background-image: url("../images/master-builder-2.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+/*not used, originally had a gradient over image to darken
+kept in css style sheets just in case I want to use later*/
+.darken {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/master-builder-2.jpg");
+}
+/*sets blur on bottom with text and fixes the background image so italic
+feels like you are exploring the building while scrolling on the page*/
+.main-image > #main-heading {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: inherit;
+	background-attachment: fixed;
+	padding: 20px 10px;
+}
+
+.main-image>#main-heading:before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	background-attachment: fixed;
+	-moz-filter: blur(12px);
+	-webkit-filter: blur(12px);
+	transform: scale(2) translateY(20px);
+}
+
+.main-image>#main-heading>h2 {
+	margin: 0;
+	color: white;
+	position: relative;
+	z-index: 1;
+	text-shadow: 0 1px 0 black;
+	font-family: "Legothick";
+	font-size: 60px;
+}
+/*end of blur styling*/
+/*end of main-image styling*/
+
+/*bottom section(footer) styles*/
+.inside-feature {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+
+.feature-image {
+	margin: 0;
+	min-width: 100%;
+	cursor: pointer;
+}
+
+.footer-header {
+	color: #bcbbbb;
+	font-size: 2.5em;
+	padding-left: 5%;
+	padding-bottom: 20px;
+}
+
+.feature-header {
+	color: #747704;
+	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+/*end of bottom section(footer) styles*/
+
+/*modal styles*/
+.modal-title {
+	font-size: 24px;
+}
+
+.modal-description {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+}
+/*end of modal styles*/
+
+/*media queries to assist bootstrap styles for breakpoints*/
+
+/*media query for breakpoint at 768px 
+makes header text smaller,aligns footer header to center
+and places each footer image as a single row instead of 3 in a row,
+removes blur from main image and makes image 75% width to fit in smaller area*/
+@media screen and (max-width: 768px) {
+	.name {
+		font-size: 3.5em;
+		font-weight: 100;
+	}
+
+	.job {
+		font-size: 2em;
+		font-weight: 300;
+		}
+
+	.footer-header {
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		}
+	
+	.inside-feature {
+		width: 75%;
+		margin: auto auto;
+		margin-bottom: 20px;
+	}
+
+	.feature-image {
+		margin: auto auto;
+		min-width: 75%;
+	}
+
+	.main-image {
+		min-height: 300px;
+	}
+
+	.main-image>#main-heading:before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+		background-attachment: fixed;
+		-moz-filter: blur(12px);
+		-webkit-filter: blur(12px);
+		transform: scale(2) translateY(9999px);
+	}
+}/*end of media query for 768px*/
+
+/*media query for breakpoint at 550px
+made text smaller in header area
+main image made smaller to fit in smaller area
+blur removed from main-image
+footer images made smaller
+*/
+@media screen and (max-width: 550px) {	
+	.name {
+		font-size: 2em;
+		font-weight: 300;
+	}
+
+	.job {
+		font-size: 1.5em;
+		font-weight: 300;
+	}
+	
+	.main-image {
+		min-height: 200px;
+	}
+	
+	.footer-header {
+		padding: 0;
+		text-align: center;
+	}
+	
+	.inside-feature {
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+
+	.feature-image {
+		margin: auto auto;
+		min-width: 33%;
+	}
+
+	.main-image>#main-heading:before{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+		background-attachment: fixed;
+		-moz-filter: blur(12px);
+		-webkit-filter: blur(12px);
+		transform: scale(2) translateY(9999px);
+	}
+
+	.main-image>#main-heading>h2 {
+		margin: 0;
+		color: white;
+		position: relative;
+		z-index: 1;
+		text-shadow: 0 1px 0 black;
+		font-family: "Legothick";
+		font-size: 42px;
+	}
+}/*end of media query for 550px*/

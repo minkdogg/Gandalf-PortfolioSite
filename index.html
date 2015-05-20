@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<!-- My resume template based on mock-up for Project 1. I tried having a little fun with this.
+I used bootstrap for my responsiveness as well as 2 media queries.
+JavaScript was used to stop the iframe video from youTube to stop playing after closing.-->
+
+<html lang="en">
+<head>
+	<title>Emmet-Resume</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+	<div class = "container">
+		<!--header row which includes logo and text-->
+		<header class="row header holder">
+			<div id="logo" class="col-xs-4 text-left">
+				<img src="images/little-emmit.jpg" class="img-responsive logo" alt="Picture or logo of Emmet Brickowski">
+			</div>
+			<div class="col-xs-8 text-right description">
+				<h1 class = "name">Emmet Brickowski</h1>
+				<h3 class ="job">Master Builder</h3>
+			</div>
+		</header><!-- end of header row -->
+			
+		<hr>
+			
+		<!--main image area-->
+		<main class = "row">
+			<section class="main-image col-xs-12">
+				<div id="main-heading">
+				<h2>EVERYTHING IS AWESOME!</h2>
+				</div>
+			</section><!--end of main-image-->
+		</main><!--end of containing row used in case another row is needed-->
+		
+		<!--footer area for sections-->
+		<footer class = "container row">
+			<section>
+				<h3 class = "footer-header">Featured Work</h3>
+			</section>
+			
+			<section class = "row">
+				<section class = "col-sm-4 col-xs-12">
+					<figure class = "inside-feature text-center">
+						<img class="img-responsive feature-image text-center" alt="Batman, Benny, Lucy, and Vitruvius. My friends." src="images/friends.jpg" data-toggle="modal" data-target="#mymodalfriends">
+						<figcaption><h4 class = "feature-header">Made some Frends!</h4>
+							<div class= "inside-feature-text">
+								<p class="feature-description">Are you friends with Batman? What about a guy who loves spaceships? A wizard? I am. It's awesome!</p>
+							</div>
+						</figcaption>
+					</figure>
+				</section>
+		
+				<section class = "col-sm-4 col-xs-12">
+					<figure class = "inside-feature text-center">
+						<img class="img-responsive feature-image text-center" alt="Lucy a.k.a. Wildstyle (My girlfriend)" src="images/love.jpg"  data-toggle="modal" data-target="#mymodallove">
+						<figcaption><h4 class = "feature-header">Found True Love!</h4>
+							<div class = "inside-feature-text">
+								<p class="feature-description">Yep. That's Lucy (a.k.a Wyldstyle) She's the most awesome master builder on the planet!</p>
+							</div>
+						</figcaption>
+					</figure>
+				</section>
+		
+				<section class = "col-sm-4 col-xs-12">
+					<figure class = "inside-feature text-center">
+						<img class="img-responsive feature-image text-center" alt="Lord Business is the bad guy" src="images/enemies.jpg"   data-toggle="modal" data-target="#mymodalbad">
+						<figcaption><h4 class = "feature-header">Stopped Evil Plans</h4>
+							<div class="inside-feature-text">
+								<p class = "feature-description">No big deal. I just stopped Lord Business from using "the Kragle" on us. Just part of being awesome!</p>
+							</div>
+						</figcaption>
+					</figure>
+				</section>
+			</section><!--end of features row -->
+		</footer><!--end of bottom-footer containing row-->
+	
+		<!--modal windows-->
+		
+		<!--friends modal-->
+		<aside class="modal fade" tabindex = "-1" aria-labelledby="mymodalfriends" aria-hidden="true" id="mymodalfriends">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center">Friend Builds Spaceship</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 4:3 aspect ratio -->
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/7TYJyCCO8Dc" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="modal-description">
+						<p class="text-center">Here's a video of my friend Benny building a spaceship. He was waiting for so long to build us one and he finally got to!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</aside><!-- /.modal -->
+
+		<!--modal for Emmet and Lucy-->
+		<aside class="modal fade" tabindex = "-1" aria-labelledby="mymodallove" aria-hidden="true" id="mymodallove">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center">Our first meeting</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 4:3 aspect ratio -->
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" width="420" height="315" src="https://www.youtube.com/embed/A2CwJDIoTXw" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="modal-description">
+						<p class="text-center">Here's a video of how we first met! It was love at first sight!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</aside><!-- /.modal -->
+
+		<!--modal for enemy-->
+		<aside class="modal fade" tabindex = "-1" aria-labelledby="mymodalbad" aria-hidden="true" id="mymodalbad">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title text-center">Lord Business</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 4:3 aspect ratio -->
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/52oa6hx4Cgc" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="modal-description">
+						<p class="text-center">This video shows what I was up against. He was a super not-awesome guy at first.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</aside><!-- /.modal -->
+		
+	</div><!--end of container-fluid-->
+	
+</body>
+
+</html>
